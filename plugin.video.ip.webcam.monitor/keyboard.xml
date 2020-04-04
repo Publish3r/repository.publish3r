@@ -1,0 +1,7 @@
+﻿<keymap>
+  <global>
+    <keyboard>
+      <m mod="alt">XBMC.RunScript(special://home/addons/plugin.video.ip.webcam.monitor/resources/lib/overlay.py)</m>
+    </keyboard>
+  </global>
+</keymap>

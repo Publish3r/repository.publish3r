@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.ip.webcam.monitor" name="IP Webcam Monitor" version="1.0.1" provider-name="Publish3r">
+  <requires>
+    <import addon="xbmc.python" version="2.25.0"/>
+    <import addon="script.module.requests" version="2.12.4" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">IP Webcam Monitor</summary>
+    <summary lang="de">IP Webcam Monitor</summary>
+    <description lang="en">Monitor for the Smartphone App:[CR]IP Webcam.[CR][CR]Google Play Store:[CR]https://play.google.com/store/apps/details?id=com.pas.webcam or https://is.gd/ipwmonitor</description>
+    <description lang="de">Monitor für die Smartphone App:[CR]IP Webcam.[CR][CR]Google Play Store:[CR]https://play.google.com/store/apps/details?id=com.pas.webcam oder https://is.gd/ipwmonitor</description>
+    <disclaimer lang="en"></disclaimer>
+    <disclaimer lang="de"></disclaimer>
+    <language>en</language>
+    <language>de</language>
+    <platform>all</platform>
+    <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>

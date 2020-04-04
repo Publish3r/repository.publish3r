@@ -1,0 +1,31 @@
+﻿<strings>
+    <string id="30000">Server</string>
+    <string id="30001">IP</string>
+    <string id="30002">Port</string>
+    <string id="30003">Benutzername</string>
+    <string id="30004">Passwort</string>
+    <string id="31000">Aufnahme</string>
+    <string id="31001">FFMPEG Pfad</string>
+    <string id="31002">Aufnahmedauer (z.B. 00:15:00 = 15 Minuten)</string>
+    <string id="31003">Audio Modus</string>
+    <string id="32000">Overlay</string>
+    <string id="32001">Overlay Breite:</string>
+    <string id="32002">Overlay Höhe:</string>
+    <string id="32003">Refresh Intervall (in Millisekunden):</string>
+    <string id="32004">Overlay automatisch schließen:</string>
+    <string id="32005">Overlay nach XX Sekunden schließen:</string>
+    <string id="33001">Verbindung fehlgeschlagen.</string>
+    <string id="33002">Kontrolliere die Einstellungen des Addons und der Smartphone App. Starte den Server und versuche es nochmal.</string>
+    <string id="33003">Datei löschen</string>
+    <string id="33004">Videostream aufnehmen</string>
+    <string id="33005">Audiostream aufnehmen</string>
+    <string id="33006">Aufnahmen</string>
+    <string id="33007">Alle Aufnahmen löschen</string>
+    <string id="33008">Einstellungen</string>
+    <string id="33009">Datei gelöscht.</string>
+    <string id="33010">Fehler: Datei nicht gelöscht.</string>
+    <string id="33011">Aufnahmen gelöscht.</string>
+    <string id="33012">Fehler: Aufnahmen nicht gelöscht.</string>
+    <string id="33013">Aufnahme gestartet.</string>
+    <string id="33014">Fehler: Aufnahme nicht gestartet.</string>
+</strings>

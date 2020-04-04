@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.rytec.epg.downloader" name="RytecEPG Downloader" version="1.1.7" provider-name="Publish3r">
+  <requires>
+    <import addon="xbmc.python" version="2.25.0"/>
+    <import addon="script.module.requests" version="2.12.4" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">RytecEPG Downloader for Windows</summary>
+    <summary lang="de">RytecEPG Downloader für Windows</summary>
+    <description lang="en">EPG Data for DE, AT, CH, BE, DK, ES, FR, IT, NL, UK, FI, NO and SE.[CR][CR]Please run only 2-3 times a week.</description>
+    <description lang="de">EPG Daten für DE, AT, CH, BE, DK, ES, FR, IT, NL, UK, FI, NO und SE.[CR][CR]Bitte nur 2-3 mal wöchentlich ausführen.</description>
+    <disclaimer lang="en"></disclaimer>
+    <disclaimer lang="de"></disclaimer>
+    <language>en de</language>
+    <platform>windx</platform>
+    <assets>
+        <icon>icon.png</icon>
+        <screenshot>resources/screenshot001.png</screenshot>
+        <screenshot>resources/screenshot002.png</screenshot>
+        <screenshot>resources/screenshot003.png</screenshot>
+        <screenshot>resources/screenshot004.png</screenshot>
+        <screenshot>resources/screenshot005.png</screenshot>
+        <screenshot>resources/screenshot006.png</screenshot>
+    </assets>
+  </extension>
+</addon>

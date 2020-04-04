@@ -1,0 +1,3 @@
+﻿name= RAR Mix url= "https://streaming-magenta-music-360.akamaized.net/hls/live/504581/magentamusik1/magentamusik1_1/magentamusik1.m3u8"
+name= Volcano Stage url= "https://streaming-magenta-music-360.akamaized.net/hls/live/573871/magentamusik2/magentamusik2_1/magentamusik2.m3u8"
+name= Beck's Crater Stage url= "https://streaming-magenta-music-360-ai.akamaized.net/hls/live/573872/magentamusik3/magentamusik3_1/magentamusik3.m3u8"

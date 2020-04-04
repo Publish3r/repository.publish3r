@@ -1,0 +1,7 @@
+﻿1.1.6 - Bug entfernt.
+1.1.5 - Anpassungen für 2019.
+1.1.4 - Kleine Codeänderung.
+1.1.3 - Bug entfernt.
+1.1.2 - Replays erweitert.
+1.1.1 - Weitere Funktionen hinzugefügt.
+1.1.0 - Release.

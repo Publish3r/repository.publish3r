@@ -1,0 +1,31 @@
+﻿<strings>
+    <string id="30000">Server</string>
+    <string id="30001">IP</string>
+    <string id="30002">Port</string>
+    <string id="30003">Username</string>
+    <string id="30004">Password</string>
+    <string id="31000">REC</string>
+    <string id="31001">FFMPEG Pfad</string>
+    <string id="31002">REC Duration (00:15:00 = 15 Minutes)</string>
+    <string id="31003">Audio Modus</string>
+    <string id="32000">Overlay</string>
+    <string id="32001">Overlay width:</string>
+    <string id="32002">Overlay height:</string>
+    <string id="32003">Refresh Interval (in milliseconds):</string>
+    <string id="32004">Overlay Auto-Close:</string>
+    <string id="32005">Close Overlay after XX seconds:</string>
+    <string id="33001">Connection failed.</string>
+    <string id="33002">Check the settings of the addon and the smartphone app. Start the server and try again.</string>
+    <string id="33003">Delete file</string>
+    <string id="33004">Record Videostream</string>
+    <string id="33005">Record Audiostream</string>
+    <string id="33006">Recordings</string>
+    <string id="33007">Delete all recordings</string>
+    <string id="33008">Settings</string>
+    <string id="33009">File deleted.</string>
+    <string id="33010">Error: File not deleted.</string>
+    <string id="33011">Recordings deleted.</string>
+    <string id="33012">Error: Recordings not deleted.</string>
+    <string id="33013">Recording started.</string>
+    <string id="33014">Error: Recording not started.</string>
+</strings>

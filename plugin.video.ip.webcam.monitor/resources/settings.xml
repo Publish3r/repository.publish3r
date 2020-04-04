@@ -1,0 +1,22 @@
+﻿<settings>
+    <category label="30000">
+        <setting label="30001" type="text" id="ip" default="127.0.0.1"/>
+        <setting label="30002" type="text" id="port" default="8080"/>
+        <setting label="30003" type="text" id="username" option="hidden" enable="!eq(-1,)" default=""/>
+        <setting label="30004" type="text" id="password" option="hidden" enable="!eq(-1,)" default=""/>
+    </category>
+    <category label="31000">
+        <setting label="31001" type="folder" id="folder" source="auto" option="writeable"/>
+        <setting type="sep"/>
+        <setting label="31002" type="text" id="dauer" default="00:15:00"/>
+        <setting type="sep"/>
+        <setting label="31003" type="bool" id="audiomodus" default="false"/>
+    </category>
+    <category label="32000">
+        <setting label="32001" type="number" id="width" default="320" option="int" />
+        <setting label="32002" type="number" id="height" default="180" option="int" />
+        <setting label="32003" type="slider" id="interval" default="500" range="50,50,1000" option="int" />
+        <setting label="32004" type="bool" id="autoClose" default="false" />
+        <setting label="32005" type="slider" id="duration" default="15" range="3,1,120" option="int" enable="eq(-1,true)" />
+    </category>
+</settings>

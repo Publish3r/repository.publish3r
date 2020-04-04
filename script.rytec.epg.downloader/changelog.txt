@@ -1,0 +1,28 @@
+1.1.6 - Vorschaubilder aktualisiert.
+        Zur Publish3r Repository hinzugefügt.
+
+1.1.5 - EPG Output als .xml oder als .gz Datei.
+        Bitte jetzt einen Dateinamen ohne Endung setzen.
+
+1.1.4 - FI, NO und SE hinzugefügt.
+      - Englische Übersetzung hinzugefügt.
+      - Bugs behoben.
+
+1.1.3 - Weitere Länder hinzugefügt.
+      - Einstellungen verbessert.
+      - kleine Bugs behoben.
+
+1.1.2 - WebGrab++ xmltv_time_correct hinzugefügt.
+
+1.1.1 - Weitere Downloadserver hinzugefügt. Auswahl erfolgt zufällig.
+      - EPG Download für Österreich und Schweiz hinzugefügt.
+      - Ausgabedatei jetzt benennbar.
+      - WebGrab++ integrierbar.
+      - Upload auf FTP Server möglich.
+        Die EPG Datei wird anschließend von der Festplatte gelöscht.
+      - Code überarbeitet.
+
+1.0.2 - Code bereinigt.
+
+1.0.1 
+- Release.
