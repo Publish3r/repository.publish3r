@@ -39,7 +39,7 @@ def LATEST():
      published = re.compile('<time datetime="(.*?)" pubdate>').findall(content.content)[0]
      name = re.compile('<h1 class="title">(.*?)<').findall(content.content)[0]
      name = '[COLOR blue]('+published+')[/COLOR] '+name
-     url = re.compile('http(.*?)mp4').findall(content.content)[0]
+     url = re.compile('controls="controls"><source src="http(.*?)mp4').findall(content.content)[0]
      url = 'http'+url+'mp4'
      if ' ' in url:
       url = url.replace(" ", "%20")
@@ -66,13 +66,13 @@ def LATEST():
 
 def YEARMIXES():
     r = requests.get('http://philizz.nl')
-    matches = re.compile('<a href="/yearmix-(.*?)" class="level1">').findall(r.content)
+    matches = re.compile('<a href="/yearmixes/yearmix-(.*?)"').findall(r.content)
     for match in matches:
-     link = 'http://philizz.nl/yearmix-'+match
+     link = 'http://philizz.nl/yearmixes/yearmix-'+match
      content = requests.get(link)
-     name = re.compile('<h1 class="title">(.*?)<').findall(content.content)[0]
-     url = re.compile('http(.*?)mp4').findall(content.content)[0]
-     url = 'http'+url+'mp4'
+     name = re.compile('<title>(.*?)</title>').findall(content.content)[0]
+     url = re.compile('/videos/(.*?)mp4"').findall(content.content)[0]
+     url = 'http://philizz.nl/videos/'+url+'mp4'
      if ' ' in url:
       url = url.replace(" ", "%20")
      try:

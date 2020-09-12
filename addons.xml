@@ -105,7 +105,7 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.philizz.media" name="Philizz Media" version="1.0.3" provider-name="Publish3r">
+<addon id="plugin.video.philizz.media" name="Philizz Media" version="1.0.4" provider-name="Publish3r">
   <requires>
     <import addon="xbmc.python" version="2.25.0"/>
     <import addon="script.module.requests" version="2.12.4" />
