@@ -1,0 +1,147 @@
+﻿<addons>
+<addon id="plugin.video.ip.webcam.monitor" name="IP Webcam Monitor" version="1.0.1" provider-name="Publish3r">
+  <requires>
+    <import addon="xbmc.python" version="2.25.0"/>
+    <import addon="script.module.requests" version="2.12.4" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">IP Webcam Monitor</summary>
+    <summary lang="de">IP Webcam Monitor</summary>
+    <description lang="en">Monitor for the Smartphone App:[CR]IP Webcam.[CR][CR]Google Play Store:[CR]https://play.google.com/store/apps/details?id=com.pas.webcam or https://is.gd/ipwmonitor</description>
+    <description lang="de">Monitor für die Smartphone App:[CR]IP Webcam.[CR][CR]Google Play Store:[CR]https://play.google.com/store/apps/details?id=com.pas.webcam oder https://is.gd/ipwmonitor</description>
+    <disclaimer lang="en"></disclaimer>
+    <disclaimer lang="de"></disclaimer>
+    <language>en</language>
+    <language>de</language>
+    <platform>all</platform>
+    <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="plugin.video.rockamring" name="Rock am Ring" version="1.1.6" provider-name="Publish3r">
+  <requires>
+    <import addon="xbmc.python" version="2.25.0"/>
+    <import addon="script.module.requests" version="2.12.4" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="de">Rock am Ring</summary>
+    <description lang="de">Rock am Ring:[CR]Musikfestival auf dem Nürburgring in der Nähe der Stadt Adenau in der Eifel.[CR][CR]www.rock-am-ring.com</description>
+    <disclaimer lang="de"></disclaimer>
+    <language>de</language>
+    <platform>all</platform>
+    <assets>
+        <icon>icon.jpg</icon>
+        <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="plugin.youtube.dl.starter" name="YouTube-DL Starter" version="1.1.1" provider-name="Publish3r">
+  <requires>
+    <import addon="xbmc.python" version="2.25.0"/>
+    <import addon="script.module.youtube.dl" version="14.810.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>executable</provides>
+  </extension>
+  <extension point="kodi.context.item" library="addon.py">
+    <item>
+      <label>YouTube-DL Starter</label>
+      <visible>Window.IsActive(10025)</visible>            
+    </item>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">YouTube-DL</summary>
+    <summary lang="de">YouTube-DL</summary>
+    <description lang="en">Extension for youtube-dl.[CR][CR]Video Downloader/Player:[CR]Enter url to download or play video. Or just download from the context menu.</description>
+    <description lang="de">Erweiterung für youtube-dl.[CR][CR]Video Downloader/Player:[CR]Einfach die URL eingeben und aussuchen, ob das Video runtergeladen oder abgespielt werden soll. Oder einfach aus dem Kontextmenue herunterladen.[CR][CR]WICHTIG : Wer es nutzt sollte sich vorher über die Legalität informieren. Ich übernehme da keine Verantwortung!</description>
+    <language>en de</language>
+    <platform>all</platform>
+    <assets>
+        <icon>icon.png</icon>
+        <screenshot>resources/screenshot001.png</screenshot>
+        <screenshot>resources/screenshot002.png</screenshot>
+        <screenshot>resources/screenshot003.png</screenshot>
+        <screenshot>resources/screenshot004.png</screenshot>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="script.rytec.epg.downloader" name="RytecEPG Downloader" version="1.1.7" provider-name="Publish3r">
+  <requires>
+    <import addon="xbmc.python" version="2.25.0"/>
+    <import addon="script.module.requests" version="2.12.4" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">RytecEPG Downloader for Windows</summary>
+    <summary lang="de">RytecEPG Downloader für Windows</summary>
+    <description lang="en">EPG Data for DE, AT, CH, BE, DK, ES, FR, IT, NL, UK, FI, NO and SE.[CR][CR]Please run only 2-3 times a week.</description>
+    <description lang="de">EPG Daten für DE, AT, CH, BE, DK, ES, FR, IT, NL, UK, FI, NO und SE.[CR][CR]Bitte nur 2-3 mal wöchentlich ausführen.</description>
+    <disclaimer lang="en"></disclaimer>
+    <disclaimer lang="de"></disclaimer>
+    <language>en de</language>
+    <platform>windx</platform>
+    <assets>
+        <icon>icon.png</icon>
+        <screenshot>resources/screenshot001.png</screenshot>
+        <screenshot>resources/screenshot002.png</screenshot>
+        <screenshot>resources/screenshot003.png</screenshot>
+        <screenshot>resources/screenshot004.png</screenshot>
+        <screenshot>resources/screenshot005.png</screenshot>
+        <screenshot>resources/screenshot006.png</screenshot>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="plugin.video.philizz.media" name="Philizz Media" version="1.0.4" provider-name="Publish3r">
+  <requires>
+    <import addon="xbmc.python" version="2.25.0"/>
+    <import addon="script.module.requests" version="2.12.4" />
+    <import addon="script.module.youtube.dl" version="14.810.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Philizz Media</summary>
+    <description lang="en">[B]Philizz Videomixes[/B][CR][CR]Website: philizz.com[CR]Twitter: twitter.com/philizz[CR]Facebook: facebook.com/philizzmedia</description>
+    <disclaimer lang="en"></disclaimer>
+    <language>en</language>
+    <platform>all</platform>
+    <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.jpg</fanart>
+        <screenshot>resources/screenshot001.png</screenshot>
+        <screenshot>resources/screenshot002.png</screenshot>
+        <screenshot>resources/screenshot003.png</screenshot>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="repository.publish3r" name="Publish3r Repository" version="2020.1" provider-name="Publish3r">
+	<extension point="xbmc.addon.repository" name="Publish3r">
+		<info compressed="true">https://raw.githubusercontent.com/Publish3r/repository.publish3r/master/addons.xml</info>
+		<checksum>https://raw.githubusercontent.com/Publish3r/repository.publish3r/master/addons.xml.md5</checksum>
+		<datadir zip="true">https://raw.githubusercontent.com/Publish3r/repository.publish3r/master/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Publish3r's Official Repository</summary>
+		<summary lang="de">Publish3r's Offizielles Repository</summary>
+		<description lang="en">Publish3r's development:[CR][CR]Support in the Kodinerds forum.[CR]https://www.kodinerds.net</description>
+		<description lang="de">Publish3r's development:[CR][CR]Support im Kodinerds Forum.[CR]https://www.kodinerds.net</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+</addons>
