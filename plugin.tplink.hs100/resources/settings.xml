@@ -1,0 +1,6 @@
+﻿<settings>
+    <category label="30000">
+        <setting label="30001" type="text" id="ip" default="127.0.0.1"/>
+        <setting label="30002" type="text" id="port" default="9999"/>
+    </category>
+</settings>
