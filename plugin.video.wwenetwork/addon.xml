@@ -10,15 +10,12 @@
     </extension>
     <extension point="xbmc.addon.metadata">
         <platform>all</platform>
-        <summary lang="en_GB">Watch content from the WWE Network
-        </summary>
-        <description lang="en_GB">Watch content from the WWE Network
-        </description>
-        <disclaimer lang="en_GB">Requires a WWE Network account</disclaimer>
+        <summary lang="en_GB">Watch content from the WWE Network.</summary>
+        <description lang="en_GB">If you're having issues with your WWE Network live stream: Enable proxy in addon settings.</description>
+        <disclaimer lang="en_GB">Requires a WWE Network account.</disclaimer>
         <language>en</language>
         <platform>all</platform>
         <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
-        <forum>https://forum.kodi.tv/showthread.php?tid=233467</forum>
         <website>https://watch.wwe.com/</website>
         <assets>
             <icon>icon.png</icon>
