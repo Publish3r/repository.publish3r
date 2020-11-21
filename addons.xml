@@ -147,7 +147,7 @@
 
 <addon id="plugin.tplink.hs100" name="TP Link HS100" version="1.0.2" provider-name="Publish3r">
   <requires>
-    <import addon="xbmc.python" version="2.25.0"/>
+    <import addon="xbmc.python" version="2.26.0"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py">
     <provides>executable</provides>
@@ -171,7 +171,7 @@
 
 <addon id="plugin.video.wwenetwork" name="WWE Network" version="2020.04.26" provider-name="lunartic + freyta + Publish3r">
     <requires>
-        <import addon="xbmc.python" version="2.25.0"/>
+        <import addon="xbmc.python" version="2.26.0"/>
         <import addon="script.module.requests" version="2.9.1"/>
         <import addon="inputstream.adaptive" version="2.0.10"/>
     </requires>
