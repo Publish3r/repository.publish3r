@@ -1,3 +1,5 @@
+import xbmc
+import os
 from resources.lib.wwenetwork import *
 
 params = get_params()
@@ -87,12 +89,12 @@ elif mode == 110:
     list_search_results(content_id, path)
 
 elif mode == 400:
-    account = Account()
-    account.logout()
-    dialog = xbmcgui.Dialog()
-    title = "Logout Successful"
-    dialog.notification(title, 'Logout completed successfully', ICON, 5000, False)
-    sys.exit()
+    try:
+        delfile = xbmc.translatePath("special://profile/addon_data/plugin.video.wwenetwork/settings.xml")
+        os.remove(delfile)
+        sys.exit()
+    except:
+        pass
 
 elif mode == 500:
     xbmcaddon.Addon('inputstream.adaptive').openSettings()

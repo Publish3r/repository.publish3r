@@ -21,6 +21,7 @@ def categories():
     addDir('In-Ring', 100, ICON, FANART, '/in-rings')
     addDir('Originals', 100, ICON, FANART, '/originals')
     addDir('Search', 109, ICON, FANART)
+    addDir('Logout', 400, ICON, FANART)
 
 def play_event(content_id, content_name):
     account = Account()
