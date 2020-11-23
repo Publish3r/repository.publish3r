@@ -24,6 +24,7 @@ commands.append(('[COLOR blue]Show Tracklist[/COLOR]', 'XBMC.RunScript(special:/
 def MENU():
     addDir('Latest','-',12,icon,'','Latest')
     addDir('Yearmixes','-',2,icon,'','Yearmixes')
+    addDir('Decademixes','-',14,icon,'','Decademixes')
     addDir('Videomixes','-',3,icon,'','Videomixes')
     addDir('Heroes Of The 00s','-',7,icon,'','Heroes Of The 00s')
     addDir('Back To The 90s','-',8,icon,'','Back To The 90s')
@@ -129,6 +130,13 @@ def YEARMIXES():
      desc = desc . replace ( '&rsquo;' , "'" )
      desc = desc . replace ( '&amp;' , "&" )
      addLink(name,url,image,desc,'','')
+
+def DECADEMIXES():
+    name = "Decademix Episode 1"
+    url = "http://philizz.nl/videos/decade01.mp4"
+    image = addonicon
+    desc = "Tracklist not found."
+    addLink(name,url,image,desc,'','')
 
 def VIDEOMIXESDIR():
     addDir('Videomixes 2013','-',4,icon,'','Videomixes 2013')
@@ -586,6 +594,10 @@ elif mode==11:
 elif mode==12:
         print ""
         LATEST()
+        xbmcplugin.endOfDirectory(int(sys.argv[1]))
+elif mode==14:
+        print ""
+        DECADEMIXES()
         xbmcplugin.endOfDirectory(int(sys.argv[1]))
 elif mode==13:
         url = str(url)

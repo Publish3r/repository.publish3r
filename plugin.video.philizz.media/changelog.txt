@@ -1,3 +1,4 @@
+1.0.5 - Decademixes Section added
 1.0.4 - Latest and Yearmixes fixed
 1.0.3 - Added Tropical Summer 2016, Fixed Minimix Adventures Tokyo Edition
 1.0.2 - Release.
