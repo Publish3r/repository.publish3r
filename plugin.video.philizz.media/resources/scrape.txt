@@ -1,3 +1,4 @@
+#YEARMIXES#NAME=###Yearmix 2020###URL=###https://philizz.nl/videos/yrmx2020.mp4###IMAGE=###https://i.ibb.co/K5pgT2y/folder.jpg###
 #YEARMIXES#NAME=###Yearmix 2019###URL=###https://philizz.nl/videos/yrmx2019.mp4###IMAGE=###https://www.philizz.nl/images/philizz/Philizz_Video_Yearmix_2019_-_Full_HD.jpg###
 #YEARMIXES#NAME=###Yearmix 2018###URL=###https://philizz.nl/videos/yrmx2018.mp4###IMAGE=###https://philizz.nl/images/philizz/Philizz_Video_Yearmix_2018_-_Full_HD.jpg###
 #YEARMIXES#NAME=###Yearmix 2017###URL=###https://philizz.nl/videos/yrmx2017.mp4###IMAGE=###https://philizz.nl/images/philizz/siteimg/thumbnails/thumbnails/Philizz_Video_Yearmix_2017_-_Full_HD.jpg###
@@ -9,7 +10,7 @@
 #YEARMIXES#NAME=###Yearmix 2011###URL=###https://philizz.nl/videos/ym_2011.mp4###IMAGE=###https://philizz.nl/images/philizz/siteimg/DVDCOVER-2011.jpg###
 #YEARMIXES#NAME=###Yearmix 2010###URL=###https://philizz.nl/videos/ym_2010.mp4###IMAGE=###https://philizz.nl/images/philizz/siteimg/fullcover_2010.jpg###
 #YEARMIXES#NAME=###Yearmix 2009###URL=###https://philizz.nl/videos/ym_2009.mp4###IMAGE=###https://philizz.nl/images/philizz/siteimg/fullcover_2009.jpg###
-#YEARMIXES#NAME=###Yearmix 2008###URL=###https://philizz.nl/videos/ym_2008.mp4###IMAGE=###https://s2.imagebanana.com/file/201124/w42KFUNp.png###
+#YEARMIXES#NAME=###Yearmix 2008###URL=###https://philizz.nl/videos/ym_2008.mp4###IMAGE=###https://i.ibb.co/27GKvhm/folder.jpg###
 #YEARMIXES#NAME=###Yearmix 2002###URL=###https://philizz.nl/videos/sp_ym2002.mp4###IMAGE=###https://philizz.nl/images/philizz/Philizz_Yearmix_2002_h264.jpg###
 
 #DECADEMIXES#NAME=###Decademix - Episode 1###URL=###https://philizz.nl/videos/decade01.mp4###IMAGE=###https://s1.imagebanana.com/file/201124/nvMejItz.png###
