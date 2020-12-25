@@ -25,7 +25,7 @@ def MENU():
     addDir('Mashups','-',14,icon,'','Mashups')
 
 def YEARMIXES():
-    r = requests.get('https://pastebin.pl/view/raw/95769b6b')
+    r = requests.get('https://raw.githubusercontent.com/Publish3r/repository.publish3r/master/plugin.video.philizz.media/resources/scrape.txt')
     match = re.compile('#YEARMIXES#NAME=###(.+?)###URL=###(.+?)###IMAGE=###(.+?)###').findall(r.content)
     for name,url,image in match:
         desc = name
@@ -38,7 +38,7 @@ def YEARMIXES():
         addLink(name,url,image,desc,'','')
 
 def DECADEMIXES():
-    r = requests.get('https://pastebin.pl/view/raw/95769b6b')
+    r = requests.get('https://raw.githubusercontent.com/Publish3r/repository.publish3r/master/plugin.video.philizz.media/resources/scrape.txt')
     match = re.compile('#DECADEMIXES#NAME=###(.+?)###URL=###(.+?)###IMAGE=###(.+?)###').findall(r.content)
     for name,url,image in match:
         desc = name
@@ -51,7 +51,7 @@ def DECADEMIXES():
         addLink(name,url,image,desc,'','')
 
 def ZEROS():
-    r = requests.get('https://pastebin.pl/view/raw/95769b6b')
+    r = requests.get('https://raw.githubusercontent.com/Publish3r/repository.publish3r/master/plugin.video.philizz.media/resources/scrape.txt')
     match = re.compile('#ZEROS#NAME=###(.+?)###URL=###(.+?)###IMAGE=###(.+?)###').findall(r.content)
     for name,url,image in match:
         desc = name
@@ -64,7 +64,7 @@ def ZEROS():
         addLink(name,url,image,desc,'','')
 
 def NINETIES():
-    r = requests.get('https://pastebin.pl/view/raw/95769b6b')
+    r = requests.get('https://raw.githubusercontent.com/Publish3r/repository.publish3r/master/plugin.video.philizz.media/resources/scrape.txt')
     match = re.compile('#NINETIES#NAME=###(.+?)###URL=###(.+?)###IMAGE=###(.+?)###').findall(r.content)
     for name,url,image in match:
         desc = name
@@ -77,7 +77,7 @@ def NINETIES():
         addLink(name,url,image,desc,'','')
 
 def EIGHTIES():
-    r = requests.get('https://pastebin.pl/view/raw/95769b6b')
+    r = requests.get('https://raw.githubusercontent.com/Publish3r/repository.publish3r/master/plugin.video.philizz.media/resources/scrape.txt')
     match = re.compile('#EIGHTIES#NAME=###(.+?)###URL=###(.+?)###IMAGE=###(.+?)###').findall(r.content)
     for name,url,image in match:
         desc = name
@@ -96,7 +96,7 @@ def VIDEOMIXESDIR():
     addDir('Videomixes 2011','-',12,icon,'','Videomixes 2011')
 
 def VIDEOMIXES2016():
-    r = requests.get('https://pastebin.pl/view/raw/95769b6b')
+    r = requests.get('https://raw.githubusercontent.com/Publish3r/repository.publish3r/master/plugin.video.philizz.media/resources/scrape.txt')
     match = re.compile('#VIDEOMIXES2016#NAME=###(.+?)###URL=###(.+?)###IMAGE=###(.+?)###').findall(r.content)
     for name,url,image in match:
         desc = name
@@ -109,7 +109,7 @@ def VIDEOMIXES2016():
         addLink(name,url,image,desc,'','')
 
 def VIDEOMIXES2013():
-    r = requests.get('https://pastebin.pl/view/raw/95769b6b')
+    r = requests.get('https://raw.githubusercontent.com/Publish3r/repository.publish3r/master/plugin.video.philizz.media/resources/scrape.txt')
     match = re.compile('#VIDEOMIXES2013#NAME=###(.+?)###URL=###(.+?)###IMAGE=###(.+?)###').findall(r.content)
     for name,url,image in match:
         desc = name
@@ -122,7 +122,7 @@ def VIDEOMIXES2013():
         addLink(name,url,image,desc,'','')
 
 def VIDEOMIXES2012():
-    r = requests.get('https://pastebin.pl/view/raw/95769b6b')
+    r = requests.get('https://raw.githubusercontent.com/Publish3r/repository.publish3r/master/plugin.video.philizz.media/resources/scrape.txt')
     match = re.compile('#VIDEOMIXES2012#NAME=###(.+?)###URL=###(.+?)###IMAGE=###(.+?)###').findall(r.content)
     for name,url,image in match:
         desc = name
@@ -135,7 +135,7 @@ def VIDEOMIXES2012():
         addLink(name,url,image,desc,'','')
 
 def VIDEOMIXES2011():
-    r = requests.get('https://pastebin.pl/view/raw/95769b6b')
+    r = requests.get('https://raw.githubusercontent.com/Publish3r/repository.publish3r/master/plugin.video.philizz.media/resources/scrape.txt')
     match = re.compile('#VIDEOMIXES2011#NAME=###(.+?)###URL=###(.+?)###IMAGE=###(.+?)###').findall(r.content)
     for name,url,image in match:
         desc = name
@@ -148,7 +148,7 @@ def VIDEOMIXES2011():
         addLink(name,url,image,desc,'','')
 
 def SPECIALS():
-    r = requests.get('https://pastebin.pl/view/raw/95769b6b')
+    r = requests.get('https://raw.githubusercontent.com/Publish3r/repository.publish3r/master/plugin.video.philizz.media/resources/scrape.txt')
     match = re.compile('#SPECIALS#NAME=###(.+?)###URL=###(.+?)###IMAGE=###(.+?)###').findall(r.content)
     for name,url,image in match:
         desc = name
@@ -161,7 +161,7 @@ def SPECIALS():
         addLink(name,url,image,desc,'','')
 
 def MASHUPS():
-    r = requests.get('https://pastebin.pl/view/raw/95769b6b')
+    r = requests.get('https://raw.githubusercontent.com/Publish3r/repository.publish3r/master/plugin.video.philizz.media/resources/scrape.txt')
     match = re.compile('#MASHUPS#NAME=###(.+?)###URL=###(.+?)###IMAGE=###(.+?)###').findall(r.content)
     for name,url,image in match:
         desc = name
