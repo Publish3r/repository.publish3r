@@ -4,6 +4,7 @@ RytecEPG Downloader for Windows.
 
 - Please run only 2-3 times a week
 
-Recommended EPG Project:
+Recommended EPG Projects:
 
 - easyEPG https://github.com/sunsettrack4/easyepg
+- easyEPG Kodi Addon https://github.com/DeBaschdi/service.takealug.epg-grabber
