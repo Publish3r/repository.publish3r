@@ -133,7 +133,7 @@ def KALENDER():
 
 def HIGHLIGHTS():
     r = requests.get("https://www.wms-soest.de/stadtfeste/unsere-jahres-highlights/")
-    html = re.compile('data-small="(.+?)" alt="(.+?)">').findall(r.content.decode('utf-8'))
+    html = re.compile('data-small="(.+?)" alt="(.+?)"').findall(r.content.decode('utf-8'))
     for image,name in html:
         image = str(image)
         image = 'https://www.wms-soest.de/'+image
@@ -420,22 +420,9 @@ elif mode==5:
         else:
             radar = '[COLOR blue][B]Blitermeldungen:[/B][/COLOR][CR]'+radar
     except:
-        radar = '[COLOR blue][B]Blitermeldungen:[/B][/COLOR][CR]Es liegen keine aktuellen Meldungen über Blitzer vor.' 
-    r = requests.get("https://soest.polizei.nrw/artikel/radar-messstellen/")
-    soup = BeautifulSoup(r.content, 'html.parser')
-    blitzer = soup.find(class_="body-text-wrap")
-    blitzer = str(blitzer)
-    blitzer = blitzer.replace('</p>', '[CR]')
-    blitzer = blitzer.replace('KPB Soest', '')
-    soup = BeautifulSoup(blitzer, 'html.parser')
-    blitzer = soup.find(class_="body-text-wrap").get_text()
-    blitzer = str(blitzer)
-    blitzer = blitzer.lstrip()
-    blitzer = blitzer.rstrip()
-    blitzer = blitzer[7:]
-    blitzer = "[COLOR blue][B]Radarmessstellen:[/B][/COLOR][CR]"+blitzer
+        radar = '[COLOR blue][B]Blitermeldungen:[/B][/COLOR][CR]Es liegen keine aktuellen Meldungen über Blitzer vor.'     
     dialog = xbmcgui.Dialog()
-    dialog.textviewer('Verkehrsmeldungen für den Kreis Soest', unfalle+'[CR][CR]'+staus+'[CR][CR]'+baustellen+'[CR][CR]'+warnungen+'[CR][CR]'+radar+'[CR][CR]'+blitzer)
+    dialog.textviewer('Verkehrsmeldungen für den Kreis Soest', unfalle+'[CR][CR]'+staus+'[CR][CR]'+baustellen+'[CR][CR]'+warnungen+'[CR][CR]'+radar)
     # Optional
     xbmc.executebuiltin('xbmc.activatewindow(home)')
     xbmcplugin.endOfDirectory(int(sys.argv[1]))
