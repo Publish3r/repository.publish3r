@@ -413,7 +413,26 @@ elif mode==5:
             radar = '[COLOR blue][B]Blitermeldungen:[/B][/COLOR][CR]'+radar.encode('utf-8')
     except:
         radar = '[COLOR blue][B]Blitermeldungen:[/B][/COLOR][CR]Es liegen keine aktuellen Meldungen über Blitzer vor.'
-    text = unfalle+'[CR][CR]'+staus+'[CR][CR]'+baustellen+'[CR][CR]'+warnungen+'[CR][CR]'+radar
+    
+    r = requests.get('https://soest.polizei.nrw/artikel/radar-messstellen/', headers={'USER-AGENT': USER_AGENT})
+    messstellen = re.findall('<div property="schema:text" class="field__item">(.*?)</div>',r.content.decode('utf-8'),re.DOTALL|re.MULTILINE)[0]
+    messstellen = messstellen.replace('<b>','[CR]')
+    messstellen = messstellen.replace('<br />','[CR]')
+    messstellen = messstellen.replace('</p>','[CR]')
+    messstellen = messstellen.replace('<span style="font-size: 12pt;"><span style="font-family: &quot;Arial&quot;,sans-serif;">','')
+    h = HTMLParser.HTMLParser()
+    txt = h.unescape(messstellen)
+    tags = re.findall("<[^>]+>",messstellen)
+    for tag in tags:
+        txt=txt.replace(tag,'')
+    messstellen = txt
+    messstellen = "".join(messstellen.splitlines())
+    messstellen = messstellen[17:]
+    messstellen = messstellen[:-21] 
+    messstellen = messstellen.lstrip()
+    messstellen = messstellen.rstrip()
+    messstellen = '[COLOR blue][B]Radar-Messstellen:[/B][/COLOR][CR]'+messstellen.encode('utf-8')
+    text = unfalle+'[CR][CR]'+staus+'[CR][CR]'+baustellen+'[CR][CR]'+warnungen+'[CR][CR]'+radar+'[CR][CR]'+messstellen
     text = text.replace('<br />', ' ') 
     dialog = xbmcgui.Dialog()
     dialog.textviewer('Verkehrsmeldungen für den Kreis Soest', text)
