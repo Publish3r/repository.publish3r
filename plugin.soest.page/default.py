@@ -427,8 +427,8 @@ elif mode==5:
         txt=txt.replace(tag,'')
     messstellen = txt
     messstellen = "".join(messstellen.splitlines())
-    messstellen = messstellen[17:]
-    messstellen = messstellen[:-21] 
+    messstellen = messstellen[12:]
+    messstellen = messstellen[:-16] 
     messstellen = messstellen.lstrip()
     messstellen = messstellen.rstrip()
     messstellen = '[COLOR blue][B]Radar-Messstellen:[/B][/COLOR][CR]'+messstellen.encode('utf-8')
