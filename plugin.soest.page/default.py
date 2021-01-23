@@ -43,12 +43,13 @@ def LOKALNACHRICHTEN():
         for item in items:
             title = item.getElementsByTagName('title')[0].firstChild.wholeText
             desc = item.getElementsByTagName('description')[0].firstChild.wholeText
+            link = item.getElementsByTagName('guid')[0].firstChild.wholeText
             pub = item.getElementsByTagName('pubDate')[0].firstChild.wholeText
             do = parser.parse(pub)
             now = do.strftime("%d.%m.%Y - %H:%M")
             title = title.replace('  ', ' ')
             name = title+' [COLOR blue]'+now+' Uhr[/COLOR]'
-            addLinkLokalnachrichten(name,desc,'','')
+            addLinkLokalnachrichten1(link,name,desc,'','')
     except:
         RSS_RESOURCE = requests.get('https://www.hellwegradio.de/thema/lokalnachrichten-392.rss', headers={'USER-AGENT': USER_AGENT}).text.encode('utf-8')
         xml = minidom.parseString(RSS_RESOURCE).getElementsByTagName('rss')
@@ -58,18 +59,29 @@ def LOKALNACHRICHTEN():
         for item in items:
             title = item.getElementsByTagName('title')[0].firstChild.wholeText
             desc = item.getElementsByTagName('description')[0].firstChild.wholeText
+            link = item.getElementsByTagName('guid')[0].firstChild.wholeText
             pub = item.getElementsByTagName('pubDate')[0].firstChild.wholeText
             do = parser.parse(pub)
             now = do.strftime("%d.%m.%Y - %H:%M")
             title = title.replace('  ', ' ')
             name = title+' [COLOR blue]'+now+' Uhr[/COLOR]'
-            addLinkLokalnachrichten(name,desc,'','')
+            addLinkLokalnachrichten2(link,name,desc,'','')
 
-def addLinkLokalnachrichten(name,desc,urlType,fanart):
+def addLinkLokalnachrichten1(link,name,desc,urlType,fanart):
     ok=True
     liz=xbmcgui.ListItem(name)
     image = path+'rss_orange.png'
-    u=sys.argv[0]+"?url="+image+"&mode=3&name="+name+"&description="+desc
+    u=sys.argv[0]+"?url="+link+"&mode=3&name="+name+"&description="+desc
+    liz.setProperty('IsPlayable','false')
+    liz.setInfo( type="Video", infoLabels={ "Title": name, "plot": desc } )
+    liz.setArt({'icon': image, 'thumb': image, 'poster': image, 'fanart': soest.getAddonInfo('fanart')})
+    ok=xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=u,listitem=liz)
+
+def addLinkLokalnachrichten2(link,name,desc,urlType,fanart):
+    ok=True
+    liz=xbmcgui.ListItem(name)
+    image = path+'rss_orange.png'
+    u=sys.argv[0]+"?url="+link+"&mode=33&name="+name+"&description="+desc
     liz.setProperty('IsPlayable','false')
     liz.setInfo( type="Video", infoLabels={ "Title": name, "plot": desc } )
     liz.setArt({'icon': image, 'thumb': image, 'poster': image, 'fanart': soest.getAddonInfo('fanart')})
@@ -85,20 +97,21 @@ def WELTNACHRICHTEN():
         for item in items:
             title = item.getElementsByTagName('title')[0].firstChild.wholeText
             desc = item.getElementsByTagName('description')[0].firstChild.wholeText
+            link = item.getElementsByTagName('guid')[0].firstChild.wholeText
             pub = item.getElementsByTagName('pubDate')[0].firstChild.wholeText
             do = parser.parse(pub)
             now = do.strftime("%d.%m.%Y - %H:%M")
             title = title.replace('  ', ' ')
             name = title+' [COLOR blue]'+now+' Uhr[/COLOR]'
-            addLinkWeltnachrichten(name,desc,'','')
+            addLinkWeltnachrichten(link,name,desc,'','')
     except:
-        addLinkWeltnachrichten('RSS Feed offline','','','')
+        pass
 
-def addLinkWeltnachrichten(name,desc,urlType,fanart):
+def addLinkWeltnachrichten(link,name,desc,urlType,fanart):
     ok=True
     liz=xbmcgui.ListItem(name)
     image = path+'rss_blau.png'
-    u=sys.argv[0]+"?url="+image+"&mode=14&name="+name+"&description="+desc
+    u=sys.argv[0]+"?url="+link+"&mode=14&name="+name+"&description="+desc
     liz.setProperty('IsPlayable','false')
     liz.setInfo( type="Video", infoLabels={ "Title": name, "plot": desc } )
     liz.setArt({'icon': image, 'thumb': image, 'poster': image, 'fanart': soest.getAddonInfo('fanart')})
@@ -270,8 +283,61 @@ elif mode==2:
 
 elif mode==3:
     print("")
+    r = requests.get(url, headers={'USER-AGENT': USER_AGENT})
+    text = re.findall('<p class="id-Article-content-item id-Article-content-item-summary"(.*?)<aside class="id-Article-margin">',r.content,re.DOTALL|re.MULTILINE)[0]
+    text = text.replace('<h3','[CR][CR]<h3')
+    text = text.replace('</h3>','[CR][CR]')
+    tags = re.findall("<[^>]+>",text)
+    for tag in tags:
+        text=text.replace(tag,'')
+    text = text[1:]
+    text = text.lstrip()
+    text = text.rstrip()
+    text = text.replace('&Auml;','Ä')
+    text = text.replace('&auml;','ä')
+    text = text.replace('&Uuml;','Ü')
+    text = text.replace('&uuml;','ü')
+    text = text.replace('&Ouml;','Ö')
+    text = text.replace('&ouml;','ö')
+    text = text.replace('&szlig;','ß')
+    text = text.replace('&amp;','&')
+    text = text.replace('&bdquo;','"')
+    text = text.replace('&ldquo;','"')
+    text = text.replace('&sect;','§')
+    text = text.replace('&ndash','-')
+    text = text.replace('&eacute;','é')
     dialog = xbmcgui.Dialog()
-    dialog.textviewer('Lokalnachrichten', name+'[CR][CR]'+description)
+    dialog.textviewer('Lokalnachrichten', name+'[CR][CR]'+text)
+    sys.exit(0)
+    xbmcplugin.endOfDirectory(int(sys.argv[1]))
+
+elif mode==33:
+    print("")
+    r = requests.get(url, headers={'USER-AGENT': USER_AGENT})
+    text = re.findall('<div class="col s12"><p>(.*?)</article>',r.content,re.DOTALL|re.MULTILINE)[0]
+    tags = re.findall("<[^>]+>",text)
+    for tag in tags:
+        text=text.replace(tag,'')
+    text = text.lstrip()
+    text = text.rstrip()
+    text = text.replace('&#xC4;','Ä')
+    text = text.replace('&#xE4;','ä')
+    text = text.replace('&#xDC;;','Ü')
+    text = text.replace('&#xFC;','ü')
+    text = text.replace('&#xD6;','Ö')
+    text = text.replace('&#xF6;','ö')
+    text = text.replace('&#xDF;','ß')
+    text = text.replace('&#x26','&')
+    text = text.replace('&#xA7;','§')
+    text = text.replace('&#xAB;','"')
+    text = text.replace('&#xBB;','"')
+    text = text.replace('&#xA9;','©')
+    text = text.replace('&#x2013;','-')
+    text = text.replace('&#xE9;','é')
+    text = text.replace('&#xA0;',' ')
+    text = text.replace('&quot;','"')
+    dialog = xbmcgui.Dialog()
+    dialog.textviewer('Lokalnachrichten', name+'[CR][CR]'+text)
     sys.exit(0)
     xbmcplugin.endOfDirectory(int(sys.argv[1]))
 
@@ -473,5 +539,32 @@ elif mode==13:
 
 elif mode==14:
     print("")
+    r = requests.get(url, headers={'USER-AGENT': USER_AGENT})
+    text = re.findall('<div class="row"><div class="col s12">(.*?)</article>',r.content,re.DOTALL|re.MULTILINE)[0]
+    text = text.replace('<p','[CR]<p')
+    text = text.replace('</p>','[CR]')
+    tags = re.findall("<[^>]+>",text)
+    for tag in tags:
+        text=text.replace(tag,'')
+    text = text.lstrip()
+    text = text.rstrip()
+    text = text.replace('&#xC4;','Ä')
+    text = text.replace('&#xE4;','ä')
+    text = text.replace('&#xDC;;','Ü')
+    text = text.replace('&#xFC;','ü')
+    text = text.replace('&#xD6;','Ö')
+    text = text.replace('&#xF6;','ö')
+    text = text.replace('&#xDF;','ß')
+    text = text.replace('&#x26','&')
+    text = text.replace('&#xA7;','§')
+    text = text.replace('&#xAB;','"')
+    text = text.replace('&#xBB;','"')
+    text = text.replace('&#xA9;','©')
+    text = text.replace('&#x2013;','-')
+    text = text.replace('&#xE9;','é')
+    text = text.replace('&#xA0;',' ')
+    text = text.replace('&quot;','"')
     dialog = xbmcgui.Dialog()
-    dialog.textviewer('NRW, Deutschland und die Welt', name+'[CR][CR]'+description)
+    dialog.textviewer('NRW, Deutschland und die Welt', name+'[CR][CR]'+text)
+    sys.exit(0)
+    xbmcplugin.endOfDirectory(int(sys.argv[1]))
