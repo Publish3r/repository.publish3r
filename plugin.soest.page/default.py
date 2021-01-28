@@ -507,7 +507,7 @@ elif mode==5:
         txt=txt.replace(tag,'')
     messstellen = txt
     messstellen = "".join(messstellen.splitlines())
-    messstellen = messstellen[13:]
+    messstellen = messstellen[17:]
     messstellen = messstellen[:-16] 
     messstellen = messstellen.lstrip()
     messstellen = messstellen.rstrip()
